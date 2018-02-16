@@ -1,0 +1,5 @@
+06-01 19:16 root         INFO     This is a message from logging.info .
+06-01 19:16 myapp.area1  DEBUG    message from logger1.debug.
+06-01 19:16 myapp.area1  INFO     message from logger1 info.
+06-01 19:16 myapp.area2  WARNING  message from logger2.warning.
+06-01 19:16 myapp.area2  ERROR    message from logger2.error .

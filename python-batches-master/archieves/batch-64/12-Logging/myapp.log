@@ -1,0 +1,5 @@
+08-29 20:07 root         INFO     Info message from logging module.
+08-29 20:07 myapp.area1  DEBUG    debug message from logger1.
+08-29 20:07 myapp.area1  INFO     info message from logger1.
+08-29 20:07 myapp.area2  WARNING  warning message from logger2.
+08-29 20:07 myapp.area2  ERROR    error message from logger2.

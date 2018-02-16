@@ -1,0 +1,824 @@
+In [1]: help()
+
+Welcome to Python 2.7!  This is the online help utility.
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at http://docs.python.org/2.7/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, or topics, type "modules",
+"keywords", or "topics".  Each module also comes with a one-line summary
+of what it does; to list the modules whose summaries contain a given word
+such as "spam", type "modules spam".
+
+help> modules
+
+Please wait a moment while I gather a list of all available modules...
+
+/home/tcloudost/anaconda2/lib/python2.7/site-packages/IPython/kernel/__init__.py:13: ShimWarning: The `IPython.kernel` package has been deprecated. You should import from ipykernel or jupyter_client instead.
+  "You should import from ipykernel or jupyter_client instead.", ShimWarning)
+/home/tcloudost/anaconda2/lib/python2.7/site-packages/astropy/analytic_functions/blackbody.py:30: RuntimeWarning: overflow encountered in expm1
+  _has_buggy_expm1 = np.isnan(np.expm1(1000))
+                            
+/home/tcloudost/anaconda2/lib/python2.7/site-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn('Matplotlib is building the font cache using fc-list. This may take a moment.')
+/home/tcloudost/anaconda2/lib/python2.7/site-packages/matplotlib/cbook.py:137: MatplotlibDeprecationWarning: The matplotlib.delaunay module was deprecated in version 1.4. Use matplotlib.tri.Triangulation instead.
+  warnings.warn(message, mplDeprecation, stacklevel=1)
+/home/tcloudost/anaconda2/lib/python2.7/site-packages/nltk/twitter/__init__.py:20: UserWarning: The twython library has not been installed. Some functionality from the twitter package will not be available.
+  warnings.warn("The twython library has not been installed. "
+/home/tcloudost/anaconda2/lib/python2.7/pkgutil.py:110: FutureWarning: The pandas.rpy module is deprecated and will be removed in a future version. We refer to external packages like rpy2. 
+See here for a guide on how to port your code to rpy2: http://pandas.pydata.org/pandas-docs/stable/r_interface.html
+  __import__(name)
+/home/tcloudost/anaconda2/lib/python2.7/site-packages/skimage/filter/__init__.py:6: skimage_deprecation: The `skimage.filter` module has been renamed to `skimage.filters`.  This placeholder module will be removed in v0.13.
+  warn(skimage_deprecation('The `skimage.filter` module has been renamed '
+ANSI                cProfile            linecache           sched
+BaseHTTPServer      cStringIO           linuxaudiodev       scipy
+Bastion             cairo               llvmlite            screen
+CDROM               calendar            locale              select
+CGIHTTPServer       cdecimal            logging             sets
+Canvas              cffi                lxml                setuptools
+ConfigParser        cgi                 macpath             sgmllib
+Cookie              cgitb               macurl2path         sha
+Crypto              chunk               mailbox             shelve
+Cython              cio_test            mailcap             shlex
+DLFCN               clyent              markupbase          shutil
+Dialog              cmath               markupsafe          signal
+DocXMLRPCServer     cmd                 marshal             simplegeneric
+FSM                 code                math                singledispatch
+FileDialog          codecs              matplotlib          singledispatch_helpers
+FixTk               codeop              md5                 sip
+HTMLParser          collections         mhlib               sipconfig
+IN                  colorama            mimetools           sipdistutils
+IPython             colorsys            mimetypes           site
+MimeWriter          command             mimify              six
+OpenSSL             commands            mistune             skimage
+PIL                 compileall          mkl                 sklearn
+PyQt4               compiler            mmap                smtpd
+Queue               concurrent          modulefinder        smtplib
+ScrolledText        conda               mpl_toolkits        sndhdr
+SimpleDialog        conda_build         multifile           snowballstemmer
+SimpleHTTPServer    conda_env           multipledispatch    socket
+SimpleXMLRPCServer  configobj           multiprocessing     sockjs
+SocketServer        contextlib          mutex               sphinx
+StringIO            cookielib           nbconvert           sphinx_rtd_theme
+TYPES               copy                nbformat            spwd
+Tix                 copy_reg            netrc               spyderlib
+Tkconstants         crypt               networkx            spyderplugins
+Tkdnd               cryptography        new                 sqlalchemy
+Tkinter             csv                 nis                 sqlite3
+UserDict            ctypes              nltk                sre
+UserList            curl                nntplib             sre_compile
+UserString          curses              nose                sre_constants
+_LWPCookieJar       cycler              notebook            sre_parse
+_MozillaCookieJar   cython              ntpath              ssl
+__builtin__         cythonmagic         nturl2path          stat
+__future__          cytoolz             numba               statsmodels
+_abcoll             datashape           numbers             statvfs
+_ast                datetime            numexpr             storemagic
+_bisect             dateutil            numpy               string
+_cffi_backend       dbhash              odo                 stringold
+_codecs             decimal             opcode              stringprep
+_codecs_cn          decorator           openpyxl            strop
+_codecs_hk          difflib             operator            struct
+_codecs_iso2022     dircache            optparse            subprocess
+_codecs_jp          dis                 os                  sunau
+_codecs_kr          distutils           os2emxpath          sunaudio
+_codecs_tw          doctest             ossaudiodev         symbol
+_collections        docutils            pandas              sympy
+_csv                dumbdbm             parser              sympyprinting
+_ctypes             dummy_thread        path                symtable
+_ctypes_test        dummy_threading     patsy               sys
+_curses             dynd                pdb                 sysconfig
+_curses_panel       easy_install        pep8                syslog
+_elementtree        email               pexpect             tables
+_functools          encodings           pickle              tabnanny
+_hashlib            enum                pickleshare         tarfile
+_heapq              errno               pickletools         telnetlib
+_hotshot            et_xmlfile          pip                 tempfile
+_io                 exceptions          pipes               terminado
+_json               extern              pkg_resources       termios
+_locale             fastcache           pkgutil             test_path
+_lsprof             fcntl               platform            test_pycosat
+_markerlib          fdpexpect           plistlib            tests
+_multibytecodec     filecmp             ply                 textwrap
+_multiprocessing    fileinput           popen2              this
+_osx_support        flask               poplib              thread
+_pyio               fnmatch             posix               threading
+_pytest             formatter           posixfile           time
+_random             fpformat            posixpath           timeit
+_socket             fractions           pprint              tkColorChooser
+_sqlite3            ftplib              profile             tkCommonDialog
+_sre                funcsigs            pstats              tkFileDialog
+_ssl                functools           psutil              tkFont
+_strptime           future_builtins     pty                 tkMessageBox
+_struct             gc                  ptyprocess          tkSimpleDialog
+_symtable           genericpath         pwd                 toaiff
+_sysconfigdata      getopt              pxssh               token
+_testcapi           getpass             py                  tokenize
+_threading_local    gettext             py_compile          toolz
+_tkinter            gevent              pyasn1              tornado
+_vendor             geventwebsocket     pyclbr              trace
+_version            glob                pycosat             traceback
+_warnings           greenlet            pycparser           traitlets
+_weakref            grin                pycurl              ttk
+_weakrefset         grp                 pydoc               tty
+_yaml               gzip                pydoc_data          turtle
+abc                 h5py                pyexpat             types
+abstract_rendering  hashlib             pyflakes            unicodecsv
+aifc                heapq               pygments            unicodedata
+alabaster           hmac                pylab               unittest
+antigravity         hotshot             pyparsing           urllib
+anydbm              htmlentitydefs      pytest              urllib2
+argcomplete         htmllib             pytz                urlparse
+argparse            httplib             pyximport           user
+array               idlelib             qtconsole           uu
+ast                 idna                quopri              uuid
+astropy             ihooks              random              validate
+asynchat            imaplib             re                  vba_extract
+asyncore            imghdr              readline            warnings
+atexit              imp                 redis               wave
+audiodev            importlib           repr                weakref
+audioop             imputil             requests            webbrowser
+autoreload          inspect             resource            werkzeug
+babel               io                  rexec               wheel
+backports           ipaddress           rfc822              whichdb
+backports_abc       ipykernel           rlcompleter         wsgiref
+base64              ipython_genutils    rmagic              xdrlib
+bdb                 ipywidgets          robotparser         xlrd
+binascii            itertools           rope                xlsxwriter
+binhex              itsdangerous        rst2html            xlwt
+binstar_client      jdcal               rst2latex           xml
+bisect              jedi                rst2man             xmllib
+bitarray            jinja2              rst2odt             xmlrpclib
+blaze               json                rst2odt_prepstyles  xxsubtype
+bokeh               jsonschema          rst2pseudoxml       yaml
+boto                jupyter             rst2s5              zipfile
+bottleneck          jupyter_client      rst2xetex           zipimport
+bs4                 jupyter_console     rst2xml             zlib
+bsddb               jupyter_core        rstpep2html         zmq
+bz2                 keyword             runpy               
+cPickle             lib2to3             runxlrd             
+
+Enter any module name to get more help.  Or, type "modules spam" to search
+for modules whose descriptions contain the word "spam".
+
+help> 
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+
+# import modules
+
+In [3]: import math
+
+In [4]: print dir(math)
+['__doc__', '__file__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
+
+In [5]: math.
+math.acos       math.ceil       math.erfc       math.frexp      math.lgamma     math.radians
+math.acosh      math.copysign   math.exp        math.fsum       math.log        math.sin
+math.asin       math.cos        math.expm1      math.gamma      math.log10      math.sinh
+math.asinh      math.cosh       math.fabs       math.hypot      math.log1p      math.sqrt
+math.atan       math.degrees    math.factorial  math.isinf      math.modf       math.tan
+math.atan2      math.e          math.floor      math.isnan      math.pi         math.tanh
+math.atanh      math.erf        math.fmod       math.ldexp      math.pow        math.trunc
+
+In [5]: math.pi
+Out[5]: 3.141592653589793
+
+In [6]: math.pow?
+Docstring:
+pow(x, y)
+
+Return x**y (x to the power of y).
+Type:      builtin_function_or_method
+
+In [7]: math.pow(2,3)
+Out[7]: 8.0
+
+In [8]: 
+
+# importing using alias name
+
+In [9]: import math as m
+
+In [10]: m.
+m.acos       m.atanh      m.e          m.factorial  m.hypot      m.log10      m.sin
+m.acosh      m.ceil       m.erf        m.floor      m.isinf      m.log1p      m.sinh
+m.asin       m.copysign   m.erfc       m.fmod       m.isnan      m.modf       m.sqrt
+m.asinh      m.cos        m.exp        m.frexp      m.ldexp      m.pi         m.tan
+m.atan       m.cosh       m.expm1      m.fsum       m.lgamma     m.pow        m.tanh
+m.atan2      m.degrees    m.fabs       m.gamma      m.log        m.radians    m.trunc
+
+In [10]: m.pi
+Out[10]: 3.141592653589793
+
+In [11]: m.pow(2,3)
+Out[11]: 8.0
+
+# importing only the required functions.
+
+In [13]: from math import pi,pow
+
+In [14]: print pi
+3.14159265359
+
+In [15]: print pow(2,3)
+8.0
+
+In [16]: 
+
+In [19]: # DONT TRY THIS AT OFFICE AND HOME.
+
+In [20]: # from math import *
+
+# module
+# module - program
+program1 -> f1,f2,f3,f4
+program2 -> f1,f2,f3,progam1.f1
++ import program1
++ program1.f1
+
+
+tcloudost@tcloudost-VirtualBox ~/Documents/python-batches/python-batches/batch-61/modules $ ls
+first.py  Learning_modules.txt
+tcloudost@tcloudost-VirtualBox ~/Documents/python-batches/python-batches/batch-61/modules $ ipython
+Python 2.7.11 |Anaconda 2.5.0 (64-bit)| (default, Dec  6 2015, 18:08:32) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.0.3 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: pwd
+Out[1]: u'/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules'
+
+In [2]: ls
+first.py  Learning_modules.txt
+
+In [3]: import first as f
+
+In [4]: f.
+f.my_add    f.my_div    f.my_multi  f.my_sub    f.version   
+
+In [4]: f.version
+Out[4]: 1.0
+
+In [5]: f.my_add?
+Signature: f.my_add(a, b)
+Docstring: This is for addition of two numbers or strings.
+File:      ~/Documents/git_repositories/python-batches/batch-61/modules/first.py
+Type:      function
+
+In [6]: my_string="python"
+
+In [7]: my_string.upper?
+Docstring:
+S.upper() -> string
+
+Return a copy of the string S converted to uppercase.
+Type:      builtin_function_or_method
+
+In [8]: 
+
+
+--- what is .pyc file -- 
+
+In [9]: f.version
+Out[9]: 1.0
+
+In [10]: f.version
+Out[10]: 1.0
+
+In [11]: import first as f
+
+In [12]: f.version
+Out[12]: 1.0
+
+In [13]: ls
+first.py  first.pyc  Learning_modules.txt
+
+In [14]: reload(f)
+Out[14]: <module 'first' from 'first.py'>
+
+In [15]: f.version
+Out[15]: 2.0
+
+tcloudost@tcloudost-VirtualBox ~/Documents/git_repositories/python-batches/batch-61/modules $ file first.py
+first.py: Python script, ASCII text executable
+tcloudost@tcloudost-VirtualBox ~/Documents/git_repositories/python-batches/batch-61/modules $ file first.pyc
+first.pyc: python 2.7 byte-compiled
+tcloudost@tcloudost-VirtualBox ~/Documents/git_repositories/python-batches/batch-61/modules $ cat first.pyc
+
+Yc@s.dZd�Zd�Zd�Zd�ZdS(g�?cC||S(s5
+		This is for addition of two numbers or strings. 
+	((tatb((first.pytmy_addscCs ||kr||S||SdS(s-
+		This is for substraction of two numbers.
+	N((RR((first.pytmy_sub
+                                 s
+                                    cC||S(s)
+		This is for division of two numbers.
+	((RR((first.pytmy_divscC||S(s/
+		This is for multiplication of two numbers.
+	((RR((first.pymy_multisN(tversionRRRR(((first.py<module>				tcloudost@tcloudost-VirtualBox ~/Documents/git_repositories/python-batches/batch-61/modules $ 
+
+* .pyc is platform independent.
+
+ Modules: pwd
+/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules
+ Modules: ls
+first.py  first.pyc  Learning_modules.txt  second.py
+ Modules: 
+ Modules: ipython
+Python 2.7.11 |Anaconda 2.5.0 (64-bit)| (default, Dec  6 2015, 18:08:32) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.0.3 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import first as f
+Launching a missile
+
+In [2]: f.
+f.my_add    f.my_div    f.my_multi  f.my_sub    f.version   
+
+In [2]: f.my_add
+Out[2]: <function first.my_add>
+
+In [3]: def g():
+   ...:     pass
+   ...: 
+
+In [4]: g
+Out[4]: <function __main__.g>
+
+In [5]: print globals()
+{'_dh': [u'/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules'], '__': <function my_add at 0x7f9ba15fd848>, '__builtin__': <module '__builtin__' (built-in)>, 'quit': <IPython.core.autocall.ExitAutocall object at 0x7f9ba16098d0>, '_i5': u'print globals()', '_i4': u'g', '_i3': u'def g():\n    pass', '_i2': u'f.my_add', '_i1': u'import first as f', '__package__': None, 'exit': <IPython.core.autocall.ExitAutocall object at 0x7f9ba16098d0>, 'get_ipython': <bound method TerminalInteractiveShell.get_ipython of <IPython.terminal.interactiveshell.TerminalInteractiveShell object at 0x7f9ba16a0a10>>, '_i': u'g', '__doc__': 'Automatically created module for IPython interactive environment', '__builtins__': <module '__builtin__' (built-in)>, '_ih': ['', u'import first as f', u'f.my_add', u'def g():\n    pass', u'g', u'print globals()'], '__name__': '__main__', '___': '', '_': <function g at 0x7f9ba15fdc08>, '_sh': <module 'IPython.core.shadowns' from '/home/tcloudost/anaconda2/lib/python2.7/site-packages/IPython/core/shadowns.pyc'>, 'g': <function g at 0x7f9ba15fdc08>, 'f': <module 'first' from 'first.py'>, '_4': <function g at 0x7f9ba15fdc08>, '_2': <function my_add at 0x7f9ba15fd848>, '_iii': u'f.my_add', '_ii': u'def g():\n    pass', 'In': ['', u'import first as f', u'f.my_add', u'def g():\n    pass', u'g', u'print globals()'], '_oh': {2: <function my_add at 0x7f9ba15fd848>, 4: <function g at 0x7f9ba15fdc08>}, 'Out': {2: <function my_add at 0x7f9ba15fd848>, 4: <function g at 0x7f9ba15fdc08>}}
+
+In [6]: 
+
+Modules :ls
+first.py  first.pyc  Learning_modules.txt  second.py
+ Modules :python first.py
+Launching a missile
+ Modules :
+
+ Modules :ls -lrt
+total 32
+-rw-r--r-- 1 tcloudost tcloudost 19280 Apr 27 08:39 Learning_modules.txt
+-rw-r--r-- 1 tcloudost tcloudost  1338 Apr 27 08:57 first.pyc
+-rw-r--r-- 1 tcloudost tcloudost   567 Apr 27 08:58 first.py
+-rw-r--r-- 1 tcloudost tcloudost   271 Apr 27 09:00 second.py
+ Modules :
+ Modules :mkdir extra
+ Modules :mv first.py extra/
+ Modules :
+ Modules :tree extra/
+extra/
+`-- first.py
+
+0 directories, 1 file
+ Modules :
+ Modules :ls
+extra  first.pyc  Learning_modules.txt  second.py
+ Modules :
+ Modules :python second.py
+Launching a missile
+multiplication of two numbers 759
+addition of two numbers is 22
+addition of two strings is linux rocks
+ Modules :
+ Modules :python second.py
+addition of two numbers is 22
+addition of two strings is linux rocks
+ Modules :
+ Modules :rm -f first.pyc
+ Modules :
+ Modules :ls
+extra  first.py  Learning_modules.txt  second.py
+ Modules :mv first.py extra/
+ Modules :
+ Modules :ls
+extra  Learning_modules.txt  second.py
+ Modules :tree extra
+extra
+`-- first.py
+
+0 directories, 1 file
+ Modules :
+ Modules :ls
+extra  Learning_modules.txt  second.py
+ Modules :python second.py
+Traceback (most recent call last):
+  File "second.py", line 3, in <module>
+    import first as f
+ImportError: No module named first
+ Modules :
+
+
+ ----
+
+ In [5]: import sys
+
+In [6]: sys.path
+Out[6]: 
+['',
+ '/home/tcloudost/anaconda2/bin',
+ '/home/tcloudost/anaconda2/lib/python27.zip',
+ '/home/tcloudost/anaconda2/lib/python2.7',
+ '/home/tcloudost/anaconda2/lib/python2.7/plat-linux2',
+ '/home/tcloudost/anaconda2/lib/python2.7/lib-tk',
+ '/home/tcloudost/anaconda2/lib/python2.7/lib-old',
+ '/home/tcloudost/anaconda2/lib/python2.7/lib-dynload',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/Sphinx-1.3.5-py2.7.egg',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/setuptools-19.6.2-py2.7.egg',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/cryptography-1.0.2-py2.7-linux-x86_64.egg',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/IPython/extensions',
+ '/home/tcloudost/.ipython']
+
+In [7]: sys.path.insert(0,'/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/extra')
+
+In [8]: sys.path
+Out[8]: 
+['/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/extra',
+ '',
+ '/home/tcloudost/anaconda2/bin',
+ '/home/tcloudost/anaconda2/lib/python27.zip',
+ '/home/tcloudost/anaconda2/lib/python2.7',
+ '/home/tcloudost/anaconda2/lib/python2.7/plat-linux2',
+ '/home/tcloudost/anaconda2/lib/python2.7/lib-tk',
+ '/home/tcloudost/anaconda2/lib/python2.7/lib-old',
+ '/home/tcloudost/anaconda2/lib/python2.7/lib-dynload',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/Sphinx-1.3.5-py2.7.egg',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/setuptools-19.6.2-py2.7.egg',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/cryptography-1.0.2-py2.7-linux-x86_64.egg',
+ '/home/tcloudost/anaconda2/lib/python2.7/site-packages/IPython/extensions',
+ '/home/tcloudost/.ipython']
+
+# installation
+
+os:
+sudo apt-get install <modulename>
+
+python:
+# pip install <modulename>
+ex: pip install django  <latest version>
+ex: pip install django==1.8 <1.8 version)
+# easy_install <modulename>
+# setuptools
+
+# https://pypi.python.org/pypi
+
+# assignment
+# how to install in a virutalenv.
+
+http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/
+
+Modules :pwd
+/home/tcloudost/Documents/git_repositories/python-batches/batch-61
+Modules :cd modules/
+Modules :ls
+extra  Learning_modules.txt  second.py
+Modules :
+Modules :virtualenv myenv
+New python executable in myenv/bin/python
+Installing setuptools, pip...done.
+Modules :
+Modules :ls myenv
+bin  include  lib  local
+Modules :
+Modules :source myenv/bin/activate
+(myenv)Modules :
+(myenv)Modules :pip freeze
+argparse==1.2.1
+wsgiref==0.1.2
+(myenv)Modules :
+(myenv)Modules :pip install excel
+Downloading/unpacking excel
+  Downloading excel-1.0.0.tar.gz
+  Running setup.py (path:/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/build/excel/setup.py) egg_info for package excel
+    
+Downloading/unpacking xlrd (from excel)
+  Downloading xlrd-1.0.0.tar.gz (2.6MB): 2.6MB downloaded
+  Running setup.py (path:/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/build/xlrd/setup.py) egg_info for package xlrd
+    
+    warning: no files found matching 'README.html'
+Installing collected packages: excel, xlrd
+  Running setup.py install for excel
+    
+  Running setup.py install for xlrd
+    changing mode of build/scripts-2.7/runxlrd.py from 644 to 755
+    
+    warning: no files found matching 'README.html'
+    changing mode of /home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/bin/runxlrd.py to 755
+Successfully installed excel xlrd
+Cleaning up...
+(myenv)Modules :
+(myenv)Modules :pip freeze
+argparse==1.2.1
+excel==1.0.0
+wsgiref==0.1.2
+xlrd==1.0.0
+(myenv)Modules :python
+Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
+[GCC 4.8.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import excel
+>>> quit()
+(myenv)Modules :deactivate 
+Modules :
+Modules :ls
+extra  Learning_modules.txt  myenv  second.py
+
+
+Modules :source myenv/bin/activate
+(myenv)Modules :
+(myenv)Modules :pip freeze
+argparse==1.2.1
+excel==1.0.0
+wsgiref==0.1.2
+xlrd==1.0.0
+(myenv)Modules :pip uninstall excel
+Uninstalling excel:
+  /home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/lib/python2.7/site-packages/excel-1.0.0-py2.7.egg-info
+  /home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/lib/python2.7/site-packages/excel/__init__.py
+  /home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/lib/python2.7/site-packages/excel/__init__.pyc
+  /home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/lib/python2.7/site-packages/excel/xlrd_shortcuts.py
+  /home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules/myenv/lib/python2.7/site-packages/excel/xlrd_shortcuts.pyc
+Proceed (y/n)? y
+  Successfully uninstalled excel
+(myenv)Modules :pip freeze
+argparse==1.2.1
+wsgiref==0.1.2
+xlrd==1.0.0
+(myenv)Modules :
+
+
+# packages
+# https://docs.python.org/2/tutorial/modules.html#packages
+
+a) 
+
+(myenv)Modules :pwd
+/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules
+(myenv)Modules :ls
+extra  Learning_modules.txt  myenv  second.py
+(myenv)Modules :
+(myenv)Modules :mkdir OS
+(myenv)Modules :mkdir OS/{lin,sol,aix,hpux}
+(myenv)Modules :
+
+
+Modules :tree OS
+OS
+|-- aix
+|-- hpux
+|-- lin
+`-- sol
+
+b) create four files - first.py,second.py,third.py and fourth.py
+
+Modules :tree OS
+OS
+|-- aix
+|-- hpux
+|-- lin
+|   |-- first.py
+|   |-- fourth.py
+|   |-- second.py
+|   `-- third.py
+`-- sol
+
+4 directories, 4 files
+
+Modules :pwd
+/home/tcloudost/Documents/git_repositories/python-batches/batch-61/modules
+Modules :ls
+extra  Learning_modules.txt  myenv  OS  second.py
+Modules :cd OS
+Modules :ls
+aix  hpux  lin  sol
+Modules :ipython
+Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.1.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import lin
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-1-e3ffd921b4a6> in <module>()
+----> 1 import lin
+
+ImportError: No module named lin
+
+In [2]: 
+
+c) to make the import work create a __init__.py file under the linux folder.
+
+Modules :tree OS
+OS
+|-- aix
+|-- hpux
+|-- lin
+|   |-- first.py
+|   |-- fourth.py
+|   |-- __init__.py
+|   |-- second.py
+|   `-- third.py
+`-- sol
+
+4 directories, 5 files
+
+d) now we can import the lin folder.
+
+In [2]: import lin
+
+In [3]: lin.first.my_lin1_first()
+Out[3]: 'this is my first lin1 function'
+
+In [4]: lin.first.my_lin1_second()
+Out[4]: 'this is my second lin1 function'
+
+In [5]: lin.first.my_lin1_third()
+Out[5]: 'this is my third lin1 function'
+
+In [6]: lin.first.my_lin1_fourth()
+Out[6]: 'this is my fourth lin1 function'
+
+Modules :tree OS
+OS
+|-- aix
+|-- hpux
+|-- lin
+|   |-- first.py
+|   |-- first.pyc
+|   |-- fourth.py
+|   |-- fourth.pyc
+|   |-- __init__.py
+|   |-- __init__.pyc
+|   |-- second.py
+|   |-- second.pyc
+|   |-- third.py
+|   `-- third.pyc
+`-- sol
+
+4 directories, 10 files
+
+e) copy all the files from lin to sol folder.
+
+(myenv)Modules :cp OS/lin/*.py OS/sol/.
+(myenv)Modules :
+
+
+Modules :tree OS
+OS
+|-- aix
+|-- hpux
+|-- lin
+|   |-- first.py
+|   |-- first.pyc
+|   |-- fourth.py
+|   |-- fourth.pyc
+|   |-- __init__.py
+|   |-- __init__.pyc
+|   |-- second.py
+|   |-- second.pyc
+|   |-- third.py
+|   `-- third.pyc
+`-- sol
+    |-- first.py
+    |-- fourth.py
+    |-- __init__.py
+    |-- second.py
+    `-- third.py
+
+
+now try importing
+
+In [7]: import sol
+
+In [8]: dir(sol)
+Out[8]: 
+['__builtins__',
+ '__doc__',
+ '__file__',
+ '__name__',
+ '__package__',
+ '__path__',
+ 'first',
+ 'second',
+ 'third']
+
+In [9]: from sol import fourth
+
+In [10]: dir(sol)
+Out[10]: 
+['__builtins__',
+ '__doc__',
+ '__file__',
+ '__name__',
+ '__package__',
+ '__path__',
+ 'first',
+ 'fourth',
+ 'second',
+ 'third']
+
+
+ example of package:
+
+ (myenv)Modules :ls
+dom  etree  __init__.py  __init__.pyc  parsers  sax
+(myenv)Modules :ls dom/
+domreg.py        expatbuilder.pyc  minicompat.py   minidom.pyc     pulldom.py     xmlbuilder.pyc
+domreg.pyc       __init__.py       minicompat.pyc  NodeFilter.py   pulldom.pyc
+expatbuilder.py  __init__.pyc      minidom.py      NodeFilter.pyc  xmlbuilder.py
+(myenv)Modules :ls etree
+cElementTree.py   ElementInclude.py   ElementPath.py   ElementTree.py   __init__.py
+cElementTree.pyc  ElementInclude.pyc  ElementPath.pyc  ElementTree.pyc  __init__.pyc
+(myenv)Modules :ls parsers
+expat.py  expat.pyc  __init__.py  __init__.pyc
+(myenv)Modules :ls sax
+_exceptions.py   expatreader.py   handler.py   __init__.py   saxutils.py   xmlreader.py
+_exceptions.pyc  expatreader.pyc  handler.pyc  __init__.pyc  saxutils.pyc  xmlreader.pyc
+(myenv)Modules :tree .
+.
+|-- dom
+|   |-- domreg.py
+|   |-- domreg.pyc
+|   |-- expatbuilder.py
+|   |-- expatbuilder.pyc
+|   |-- __init__.py
+|   |-- __init__.pyc
+|   |-- minicompat.py
+|   |-- minicompat.pyc
+|   |-- minidom.py
+|   |-- minidom.pyc
+|   |-- NodeFilter.py
+|   |-- NodeFilter.pyc
+|   |-- pulldom.py
+|   |-- pulldom.pyc
+|   |-- xmlbuilder.py
+|   `-- xmlbuilder.pyc
+|-- etree
+|   |-- cElementTree.py
+|   |-- cElementTree.pyc
+|   |-- ElementInclude.py
+|   |-- ElementInclude.pyc
+|   |-- ElementPath.py
+|   |-- ElementPath.pyc
+|   |-- ElementTree.py
+|   |-- ElementTree.pyc
+|   |-- __init__.py
+|   `-- __init__.pyc
+|-- __init__.py
+|-- __init__.pyc
+|-- parsers
+|   |-- expat.py
+|   |-- expat.pyc
+|   |-- __init__.py
+|   `-- __init__.pyc
+`-- sax
+    |-- _exceptions.py
+    |-- _exceptions.pyc
+    |-- expatreader.py
+    |-- expatreader.pyc
+    |-- handler.py
+    |-- handler.pyc
+    |-- __init__.py
+    |-- __init__.pyc
+    |-- saxutils.py
+    |-- saxutils.pyc
+    |-- xmlreader.py
+    `-- xmlreader.pyc
+
+4 directories, 44 files
+(myenv)Modules :
+
+(myenv)Modules :pwd
+/usr/lib/python2.7/xml
+(myenv)Modules :
+
+
+ Reference:
+ https://docs.python.org/2/installing/index.html
+ https://docs.python.org/2/distributing/index.html
+ https://docs.python.org/2.7/distutils/  ( assignment)
+

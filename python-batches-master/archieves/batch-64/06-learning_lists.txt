@@ -1,0 +1,809 @@
+In [4]: # lists
+
+In [5]: # list is a sequence of values/items.
+
+In [7]: my_fruits = ['apple','banana','custard apple','dates']
+
+In [8]: print my_fruits,type(my_fruits)
+['apple', 'banana', 'custard apple', 'dates'] <type 'list'>
+
+In [9]: my_empty = []
+
+In [10]: print my_empty,type(my_empty)
+[] <type 'list'>
+
+In [11]: my_empty = list()
+
+In [12]: print my_empty,type(my_empty)
+[] <type 'list'>
+
+In [13]: # lists vs arrays
+
+In [14]: # indexing
+
+In [15]: # ['apple','banana','custard apple','dates']
+
+In [16]: #   0         1         2             3      # +ve indexing or left to right
+
+In [17]: #   -4        -3        -2            -1     # -ve indexing or right to left
+
+In [18]: print my_fruits[-2]
+custard apple
+
+In [19]: print my_fruits[-2][-1]
+e
+
+In [20]: print my_fruits[0]
+apple
+
+In [21]: # slicing
+
+In [22]: print my_fruits[0:]
+['apple', 'banana', 'custard apple', 'dates']
+
+In [23]: print my_fruits[0:3]
+['apple', 'banana', 'custard apple']
+
+In [24]: print my_fruits[:3]
+['apple', 'banana', 'custard apple']
+
+In [25]: my_string = "python"
+
+In [26]: my_string[0] ="T"
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-26-c938d89e3dcd> in <module>()
+----> 1 my_string[0] ="T"
+
+TypeError: 'str' object does not support item assignment
+
+In [28]: my_string[0] ="T"
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-28-c938d89e3dcd> in <module>()
+----> 1 my_string[0] ="T"
+
+TypeError: 'str' object does not support item assignment
+
+In [29]: my_fruits[0]
+Out[29]: 'apple'
+
+In [30]: my_fruits[0]='Apple'
+
+In [31]: print my_fruits
+['Apple', 'banana', 'custard apple', 'dates']
+
+# day2 
+
+In [1]: my_fruits = ['apple','banana','custard apple','dates']
+
+In [2]: my_fruits.
+my_fruits.append   my_fruits.extend   my_fruits.insert   my_fruits.remove   my_fruits.sort     
+my_fruits.count    my_fruits.index    my_fruits.pop      my_fruits.reverse  
+
+In [2]: # append
+
+In [3]: my_fruits.append?
+Type:        builtin_function_or_method
+String form: <built-in method append of list object at 0x7f31529ef518>
+Docstring:   L.append(object) -- append object to end
+
+In [4]: my_fruits.append('fig')
+
+In [5]: print my_fruits
+['apple', 'banana', 'custard apple', 'dates', 'fig']
+
+In [6]: # extend
+
+In [7]: my_fruits.extend?
+Type:        builtin_function_or_method
+String form: <built-in method extend of list object at 0x7f31529ef518>
+Docstring:   L.extend(iterable) -- extend list by appending elements from the iterable
+
+In [8]: my_fruits.extend(['guava,'grapes'])
+  File "<ipython-input-8-951c7c5972fd>", line 1
+    my_fruits.extend(['guava,'grapes'])
+                                   ^
+SyntaxError: invalid syntax
+
+
+In [9]: my_fruits.extend(['guava','grapes'])
+
+In [10]: print my_fruits
+['apple', 'banana', 'custard apple', 'dates', 'fig', 'guava', 'grapes']
+
+In [11]: # insert
+
+In [12]: my_fruits.insert?
+Type:        builtin_function_or_method
+String form: <built-in method insert of list object at 0x7f31529ef518>
+Docstring:   L.insert(index, object) -- insert object before index
+
+In [13]: my_fruits.insert(1,'avacado')
+
+In [14]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'dates', 'fig', 'guava', 'grapes']
+
+In [15]: 
+
+In [16]: # index
+
+In [17]: my_fruit.index?
+Object `my_fruit.index` not found.
+
+In [18]: my_fruits.index?
+Type:        builtin_function_or_method
+String form: <built-in method index of list object at 0x7f31529ef518>
+Docstring:
+L.index(value, [start, [stop]]) -> integer -- return first index of value.
+Raises ValueError if the value is not present.
+
+In [19]: my_fruits.index('grapes')
+Out[19]: 7
+
+In [20]: my_fruits
+Out[20]: 
+['apple',
+ 'avacado',
+ 'banana',
+ 'custard apple',
+ 'dates',
+ 'fig',
+ 'guava',
+ 'grapes']
+
+In [21]: my_fruits.index('dates')
+Out[21]: 4
+
+In [22]: my_fruits.insert(4,'grapes')
+
+In [23]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'grapes', 'dates', 'fig', 'guava', 'grapes']
+
+In [24]: my_fruits.index('grapes')
+Out[24]: 4
+
+In [25]: my_fruits.index('grapes',5)
+Out[25]: 8
+
+In [26]: # count
+
+In [27]: my_fruits.count('grapes')
+Out[27]: 2
+
+In [28]: # sort
+
+In [29]: my_fruits.sort?
+Type:        builtin_function_or_method
+String form: <built-in method sort of list object at 0x7f31529ef518>
+Docstring:
+L.sort(cmp=None, key=None, reverse=False) -- stable sort *IN PLACE*;
+cmp(x, y) -> -1, 0, 1
+
+In [30]: my_fruits
+Out[30]: 
+['apple',
+ 'avacado',
+ 'banana',
+ 'custard apple',
+ 'grapes',
+ 'dates',
+ 'fig',
+ 'guava',
+ 'grapes']
+
+In [31]: my_fruits.sort()
+
+In [32]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'dates', 'fig', 'grapes', 'grapes', 'guava']
+
+In [33]: my_fruits.sort(reverse=True)
+
+In [34]: print my_fruits
+['guava', 'grapes', 'grapes', 'fig', 'dates', 'custard apple', 'banana', 'avacado', 'apple']
+
+In [35]: # reverse
+
+In [36]: my_fruits.reverse?
+Type:        builtin_function_or_method
+String form: <built-in method reverse of list object at 0x7f31529ef518>
+Docstring:   L.reverse() -- reverse *IN PLACE*
+
+In [37]: print my_fruits.reverse()
+None
+
+In [38]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'dates', 'fig', 'grapes', 'grapes', 'guava']
+
+In [40]: my_fruits.
+my_fruits.append   my_fruits.extend   my_fruits.insert   my_fruits.remove   my_fruits.sort     
+my_fruits.count    my_fruits.index    my_fruits.pop      my_fruits.reverse  
+
+In [40]: my_fruits
+Out[40]: 
+['apple',
+ 'avacado',
+ 'banana',
+ 'custard apple',
+ 'dates',
+ 'fig',
+ 'grapes',
+ 'grapes',
+ 'guava']
+
+In [41]: my_fruits.pop?
+Type:        builtin_function_or_method
+String form: <built-in method pop of list object at 0x7f31529ef518>
+Docstring:
+L.pop([index]) -> item -- remove and return item at index (default last).
+Raises IndexError if list is empty or index is out of range.
+
+In [42]: my_fruits.pop()
+Out[42]: 'guava'
+
+In [43]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'dates', 'fig', 'grapes', 'grapes']
+
+In [44]: my_fruits.pop(-2)
+Out[44]: 'grapes'
+
+In [45]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'dates', 'fig', 'grapes']
+
+In [46]: my_fruits.pop(100)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-46-7d4322064b4c> in <module>()
+----> 1 my_fruits.pop(100)
+
+IndexError: pop index out of range
+
+In [47]: # remove
+
+In [48]: print my_fruits
+['apple', 'avacado', 'banana', 'custard apple', 'dates', 'fig', 'grapes']
+
+In [49]: my_fruits.remove('custard apple')
+
+In [50]: print my_fruits
+['apple', 'avacado', 'banana', 'dates', 'fig', 'grapes']
+
+# Assignments
+
+1) 
+my_days = ['yesterday','today','tomorrow','dayafter']
+
+task1: my output
+yesterday  9
+today      5
+tomorrow   8
+dayafter   8
+
+In [52]: my_days = ['yesterday','today','tomorrow','dayafter']
+
+In [53]: for value in my_days:
+   ....:     print value,len(value)
+   ....:     
+yesterday 9
+today 5
+tomorrow 8
+dayafter 8
+
+In [54]: print len(my_days)
+4
+
+task2:my output
+Yesterday
+TOday
+TOMorrow
+DAYAfter
+
+
+In [55]: for value in my_days:
+   ....:     print value,my_days.index(value)
+   ....:     
+yesterday 0
+today 1
+tomorrow 2
+dayafter 3
+
+In [56]: for value in my_days:
+    print value,my_days.index(value),value[my_days.index(value)]
+   ....:     
+yesterday 0 y
+today 1 o
+tomorrow 2 m
+dayafter 3 a
+
+In [57]: for value in my_days:
+    print value,value[my_days.index(value)]
+   ....:     
+yesterday y
+today o
+tomorrow m
+dayafter a
+
+In [58]: for value in my_days:
+    print value,value[my_days.index(value)],value[0:my_days.index(value)]
+   ....:     
+yesterday y 
+today o t
+tomorrow m to
+dayafter a day
+
+In [59]: for value in my_days:
+    print value,my_days.index(value),value[my_days.index(value)],value[0:my_days.index(value)]
+   ....:     
+yesterday 0 y 
+today 1 o t
+tomorrow 2 m to
+dayafter 3 a day
+
+In [60]: for value in my_days:
+    print value,my_days.index(value),value[0:my_days.index(value)]
+   ....:     
+yesterday 0 
+today 1 t
+tomorrow 2 to
+dayafter 3 day
+
+In [61]: for value in my_days:
+    print value,my_days.index(value),value[0:my_days.index(value) + 1]
+   ....:     
+yesterday 0 y
+today 1 to
+tomorrow 2 tom
+dayafter 3 daya
+
+In [62]: for value in my_days:
+    print value[0:my_days.index(value) + 1]
+   ....:     
+y
+to
+tom
+daya
+
+In [63]: my_string="python"
+
+In [64]: print my_string[0:3]
+pyt
+
+In [65]: print my_string[:3]
+pyt
+
+In [66]: print my_string[3:]
+hon
+
+In [67]: print my_string[3:] + my_string[:3]
+honpyt
+
+In [68]: print my_string[:3] + my_string[3:]
+python
+
+In [69]: 
+
+In [69]: for value in my_days:
+    print value[:my_days.index(value) + 1] + value[my_days.index(value) + 1:]
+   ....:     
+yesterday
+today
+tomorrow
+dayafter
+
+In [70]: for value in my_days:
+    print value[:my_days.index(value) + 1].upper() + value[my_days.index(value) + 1:]
+   ....:     
+Yesterday
+TOday
+TOMorrow
+DAYAfter
+
+In [72]: my_fruits = ['apple','apple','banana','banana','cherry']
+
+In [73]: # output
+
+In [74]: # my_fruits = ['apple','banana','cherry']
+
+In [75]: # my_dupli = ['apple','banana']
+
+
+
+In [76]: my_dupli=[]
+
+In [77]: for value in my_fruits:
+    if my_fruits.count(value) > 1:
+        my_dupli.append(value)
+        my_fruits.remove(value)
+
+
+In [78]: my_dupli
+Out[78]: ['apple', 'banana']
+
+In [79]: my_fruits
+Out[79]: ['apple', 'banana', 'cherry']
+
+
+## tasks
+https://github.com/sambapython/python
+https://github.com/sambapython/python/blob/master/assignments.txt
+https://github.com/sambapython/python/blob/master/assignments%20(1).txt%7E
+https://projecteuler.net/archives
+https://www.edx.org/course?search_query=python
+
+# day3
+- convertion of string to list and vice-versa
+
+In [1]: my_string="python"
+
+In [2]: # converting a string to a list
+
+In [3]: Lmy_string = list(my_string)
+
+In [4]: print Lmy_string
+['p', 'y', 't', 'h', 'o', 'n']
+
+In [5]: Lmy_string[0]="T"
+
+In [6]: print Lmy_string
+['T', 'y', 't', 'h', 'o', 'n']
+
+In [7]: # converting a list back to a string
+
+In [8]: delimiter=""
+
+In [9]: delimiter.join?
+Type:        builtin_function_or_method
+String form: <built-in method join of str object at 0x7f876f7b8508>
+Docstring:
+S.join(iterable) -> string
+
+Return a string which is the concatenation of the strings in the
+iterable.  The separator between elements is S.
+
+In [10]: delimiter.join(Lmy_string)
+Out[10]: 'Tython'
+
+In [11]: new_string=delimiter.join(Lmy_string)
+
+In [12]: print my_string
+python
+
+In [13]: print new_string
+Tython
+
+In [15]: my_sentence="today is thursday"
+
+In [16]: # list() function on a sentence
+
+In [17]: Lmy_sentence = list(my_sentence)
+
+In [18]: print Lmy_sentence
+['t', 'o', 'd', 'a', 'y', ' ', 'i', 's', ' ', 't', 'h', 'u', 'r', 's', 'd', 'a', 'y']
+
+In [19]: # converting a sentence to a series of words
+
+In [20]: my_sentence.split?
+Type:        builtin_function_or_method
+String form: <built-in method split of str object at 0x7f876d10db58>
+Docstring:
+S.split([sep [,maxsplit]]) -> list of strings
+
+Return a list of the words in the string S, using sep as the
+delimiter string.  If maxsplit is given, at most maxsplit
+splits are done. If sep is not specified or is None, any
+whitespace string is a separator and empty strings are removed
+from the result.
+
+In [21]: my_sentence.split()
+Out[21]: ['today', 'is', 'thursday']
+
+In [22]: Lmy_sentence=my_sentence.split()
+
+In [23]: print Lmy_sentence
+['today', 'is', 'thursday']
+
+In [24]: Lmy_sentence[-1] = "wednesday
+  File "<ipython-input-24-e86e7b9f18b0>", line 1
+    Lmy_sentence[-1] = "wednesday
+                                ^
+SyntaxError: EOL while scanning string literal
+
+
+In [25]: Lmy_sentence[-1] = "wednesday"
+
+In [26]: print Lmy_sentence
+['today', 'is', 'wednesday']
+
+In [27]: # convert our string to a list
+
+In [29]: limiter=" "
+
+In [30]: limiter.join(Lmy_sentence)
+Out[30]: 'today is wednesday'
+
+In [31]: my_sentence=limiter.join(Lmy_sentence)
+
+In [32]: print my_sentence
+today is wednesday
+
+- aliases
+
+In [40]: # variables
+
+In [41]: a = 1
+
+In [42]: 
+
+In [42]: 
+
+In [42]: id?
+Type:        builtin_function_or_method
+String form: <built-in function id>
+Namespace:   Python builtin
+Docstring:
+id(object) -> integer
+
+Return the identity of an object.  This is guaranteed to be unique among
+simultaneously existing objects.  (Hint: it's the object's memory address.)
+
+In [43]: id(1)
+Out[43]: 94443446276440
+
+In [44]: id(a)
+Out[44]: 94443446276440
+
+In [45]: b = 1
+
+In [46]: id(b)
+Out[46]: 94443446276440
+
+In [47]: b = 10
+
+In [48]: print a,b
+1 10
+
+In [49]: id(a),id(b),id(1),id(10)
+Out[49]: (94443446276440, 94443446276224, 94443446276440, 94443446276224)
+
+In [50]: # is operator
+
+In [51]: c = 1
+
+In [52]: a is b
+Out[52]: False
+
+In [53]: a is c
+Out[53]: True
+
+In [54]: id(a)
+Out[54]: 94443446276440
+
+In [55]: id(c)
+Out[55]: 94443446276440
+
+In [57]: # in operator on lists
+
+In [58]: my_fruits = ['apple','banana','cherry','dates']
+
+In [59]: print my_fruits
+['apple', 'banana', 'cherry', 'dates']
+
+In [60]: 'apple' in my_fruits
+Out[60]: True
+
+In [61]: 'Apple' in my_fruits
+Out[61]: False
+
+In [62]: # in works on objects
+
+In [63]: # is works on memory values
+
+In [64]: 'apple' is my_fruits
+Out[64]: False
+
+In [65]: 'Apple' is my_fruits
+Out[65]: False
+
+In [67]: # lists
+
+In [68]: a = [1,2,3]
+
+In [69]: id(a)
+Out[69]: 140219627160640
+
+####
+# soft copy,deep copy,shallow copy
+###
+
+
+In [70]: # soft copy
+
+In [71]: a = b
+
+In [72]: a = [1,2,3]
+
+In [73]: b = a
+
+In [74]: print a,b
+[1, 2, 3] [1, 2, 3]
+
+In [75]: print id(a),id(b)
+140219627159776 140219627159776
+
+In [76]: a is b
+Out[76]: True
+
+In [77]: a[1]
+Out[77]: 2
+
+In [78]: a[1]="two"
+
+In [79]: print a
+[1, 'two', 3]
+
+In [80]: print b
+[1, 'two', 3]
+
+In [81]: # soft copy - two objects refer to similar memory blocks
+
+In [82]: b = ["22","33","44"]
+
+In [83]: print a,id(a),b,id(b)
+[1, 'two', 3] 140219627159776 ['22', '33', '44'] 140219627159992
+
+In [85]: # deep copy
+
+In [86]: a = ["one","two","three"]
+
+In [87]: id(a)
+Out[87]: 140219627028352
+
+In [88]: # deep copy can be created in two ways
+
+In [89]: b = a[:]
+
+In [90]: print b,id(b),a,id(a)
+['one', 'two', 'three'] 140219628196064 ['one', 'two', 'three'] 140219627028352
+
+In [91]: import copy
+
+In [92]: c = copy.deepcopy(a)
+
+In [93]: print c,id(c),a,id(a)
+['one', 'two', 'three'] 140219593342128 ['one', 'two', 'three'] 140219627028352
+
+In [94]: # query - ashish
+
+In [95]: f = [1,2,3]
+
+In [96]: g = [1,2,3]
+
+In [97]: print f,g
+[1, 2, 3] [1, 2, 3]
+
+In [98]: f is g
+Out[98]: False
+
+In [99]: id(f),id(g)
+Out[99]: (140219593342272, 140219593367704)
+
+In [100]: 
+
+
+# python oneliners
+https://wiki.python.org/moin/Powerful%20Python%20One-Liners
+http://book.pythontips.com/en/latest/one_liners.html
+
+
+- list comprehension
+
+https://github.com/tuxfux-hlp/Python-examples/blob/master/lists/list_comprehension.txt
+a) why list comprehension
+b) when to use?
+c) where to use?
+
+example 1 - normal way
+In [101]: my_string="1,2,3,4,5,6,7,8,9,10"
+
+In [102]: # my_even="2,4,6,8,10"
+
+In [103]: # []
+
+In [104]: print my_string
+1,2,3,4,5,6,7,8,9,10
+
+In [105]: Lmy_string=my_string.split(',')
+
+In [106]: print Lmy_string
+['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+In [107]: for value in Lmy_stringP
+  File "<ipython-input-107-1214e493faea>", line 1
+    for value in Lmy_stringP
+                            ^
+SyntaxError: invalid syntax
+
+
+In [108]: my_even=[]
+
+In [109]: for value in Lmy_string:
+   .....:     if int(value) % 2 == 0:
+   .....:         my_even.append(value)
+   .....:         
+
+In [110]: print my_even
+['2', '4', '6', '8', '10']
+
+In [111]: limiter=","
+
+In [112]: limiter.join(my_even)
+Out[112]: '2,4,6,8,10'
+
+In [113]: my_new=limiter.join(my_even)
+
+In [114]: print my_new
+2,4,6,8,10
+
+example1: list comprehesions
+
+In [116]: [ value for value in my_string.split(',') ]
+Out[116]: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+In [117]: [ value for value in my_string.split(',') if int(value) % 2 == 0]
+Out[117]: ['2', '4', '6', '8', '10']
+
+In [118]: ','.join([ value for value in my_string.split(',') if int(value) % 2 == 0])
+Out[118]: '2,4,6,8,10'
+
+In [119]: # [ <print> <loops> <conditional blocks>]
+
+In [120]: 
+
+In [121]: my_string = "today is wednesday"
+
+In [122]: 
+
+In [122]: [ value for value in my_string.split() ]
+Out[122]: ['today', 'is', 'wednesday']
+
+In [123]: [ [value.capitalize(),value.lower(),value.upper()] for value in my_string.split() ]
+Out[123]: 
+[['Today', 'today', 'TODAY'],
+ ['Is', 'is', 'IS'],
+ ['Wednesday', 'wednesday', 'WEDNESDAY']]
+
+In [124]: [ {value.capitalize(),value.lower(),value.upper()) for value in my_string.split() ]
+  File "<ipython-input-124-4efe1312d507>", line 1
+    [ {value.capitalize(),value.lower(),value.upper()) for value in my_string.split() ]
+                                                     ^
+SyntaxError: invalid syntax
+
+
+In [125]: [ (value.capitalize(),value.lower(),value.upper()) for value in my_string.split() ]
+Out[125]: 
+[('Today', 'today', 'TODAY'),
+ ('Is', 'is', 'IS'),
+ ('Wednesday', 'wednesday', 'WEDNESDAY')]
+
+In [126]: [ {value.capitalize():[value.lower(),value.upper()]} for value in my_string.split() ]
+Out[126]: 
+[{'Today': ['today', 'TODAY']},
+ {'Is': ['is', 'IS']},
+ {'Wednesday': ['wednesday', 'WEDNESDAY']}]
+
+
+references:
+http://www.sanfoundry.com/python-questions-answers-list-comprehension/
+https://stackoverflow.com/questions/tagged/list-comprehension
+https://www.datacamp.com/community/tutorials/18-most-common-python-list-questions-learn-python#question9
+http://www.secnetix.de/olli/Python/list_comprehensions.hawk
+https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions
+http://www.python-course.eu/list_comprehension.php
+
+
+# todo
+
+delimiter,join
+tuples
+
+

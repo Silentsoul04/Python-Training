@@ -1,0 +1,788 @@
+# what is lists
+A list is a collection of values - homogeneous and hetrogenous.
+homogeneous - string,number,floats
+hetrogenous - strings and numbers,string and floats.
+
+Python 2.7.12+ (default, Sep 17 2016, 12:08:02) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 2.4.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: my_fruits = ['apple','banana','carrot','dates']
+
+In [2]: print my_fruits,type(my_fruits)
+['apple', 'banana', 'carrot', 'dates'] <type 'list'>
+
+In [3]: # Lists are index based values
+
+In [4]: # indexing
+
+In [5]: # creation of lists
+
+In [6]: my_fruits = ['apple','banana','carrot','dates']
+
+In [7]: my_empty = []
+
+In [8]: print my_empty,type(my_empty)
+[] <type 'list'>
+
+In [9]: my_empty = list()
+
+In [10]: print my_empty,type(my_empty)
+[] <type 'list'>
+
+array is not lists in python.
+- numpy - homogenous data structures.
+https://scipy.org/
+https://github.com/tuxfux-hlp-notes/seminars
+
+In [12]: # indexing
+
+In [13]: print my_fruits
+['apple', 'banana', 'carrot', 'dates']
+
+In [14]: print my_fruits[0]
+apple
+
+In [15]: print my_fruits[-1]
+dates
+
+In [16]: # ['apple', 'banana', 'carrot', 'dates']
+
+In [17]: #   0          1         2        3      # +ve indexing or left to right
+
+In [18]: #  -4          -3        -2       -1     # -ve indexing or right to left
+
+In [19]: my_fruits[0]
+Out[19]: 'apple'
+
+In [20]: my_fruits[0]='Apple'
+
+In [21]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates']
+
+In [22]: my_string = "python"
+
+In [23]: my_string[0]
+Out[23]: 'p'
+
+In [24]: my_string[0]="P"
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-24-faca0e608639> in <module>()
+----> 1 my_string[0]="P"
+
+TypeError: 'str' object does not support item assignment
+
+In [26]: # in operator
+
+In [27]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates']
+
+In [28]: print 'banana' in my_fruits
+True
+
+In [29]: 'apple' in my_fruits
+Out[29]: False
+
+# function in lists.
+
+In [37]: my_fruits.
+my_fruits.append   my_fruits.index    my_fruits.remove   
+my_fruits.count    my_fruits.insert   my_fruits.reverse  
+my_fruits.extend   my_fruits.pop      my_fruits.sort     
+
+In [37]: # append
+
+In [38]: my_fruits.append?
+Type:        builtin_function_or_method
+String form: <built-in method append of list object at 0x7f1bd8271d88>
+Docstring:   L.append(object) -- append object to end
+
+In [39]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates']
+
+In [40]: my_fruits.append('fig')
+
+In [41]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates', 'fig']
+
+In [42]: print my_fruits.extend?
+Type:        builtin_function_or_method
+String form: <built-in method extend of list object at 0x7f1bd8271d88>
+Docstring:   L.extend(iterable) -- extend list by appending elements from the iterable
+
+In [43]: my_fruits.extend(['gauva','jackfruit'])
+
+In [44]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [45]: # insert
+
+In [46]: my_fruits.insert?
+Type:        builtin_function_or_method
+String form: <built-in method insert of list object at 0x7f1bd8271d88>
+Docstring:   L.insert(index, object) -- insert object before index
+
+In [47]: my_fruits.insert(0,'apricot')
+
+In [48]: print my_fruits
+['apricot', 'Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [50]: my_fruits.
+my_fruits.append   my_fruits.index    my_fruits.remove   
+my_fruits.count    my_fruits.insert   my_fruits.reverse  
+my_fruits.extend   my_fruits.pop      my_fruits.sort     
+
+In [50]: my_fruits.index?
+Type:        builtin_function_or_method
+String form: <built-in method index of list object at 0x7f1bd8271d88>
+Docstring:
+L.index(value, [start, [stop]]) -> integer -- return first index of value.
+Raises ValueError if the value is not present.
+
+In [51]: print my_fruits
+['apricot', 'Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [52]: print my_fruits.index('dates'_
+   ....: 
+KeyboardInterrupt
+
+In [52]: print my_fruits.index('dates')
+4
+
+In [53]: my_fruits.append('apricot)
+  File "<ipython-input-53-c256e8b6db55>", line 1
+    my_fruits.append('apricot)
+                             ^
+SyntaxError: EOL while scanning string literal
+
+
+In [54]: my_fruits.append('apricot')
+
+In [55]: print my_fruits
+['apricot', 'Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit', 'apricot']
+
+In [56]: print my_fruits.count('apricot')
+2
+
+In [57]: print my_fruits.count('grapes')
+0
+
+In [58]: print my_fruits.count('gauva')
+1
+
+In [60]: my_fruits.
+my_fruits.append   my_fruits.index    my_fruits.remove   
+my_fruits.count    my_fruits.insert   my_fruits.reverse  
+my_fruits.extend   my_fruits.pop      my_fruits.sort     
+
+In [60]: my_fruits.pop?
+Type:        builtin_function_or_method
+String form: <built-in method pop of list object at 0x7f1bd8271d88>
+Docstring:
+L.pop([index]) -> item -- remove and return item at index (default last).
+Raises IndexError if list is empty or index is out of range.
+
+In [61]: my_fruits.pop()
+Out[61]: 'apricot'
+
+In [62]: print my_fruits
+['apricot', 'Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [63]: my_fruits.pop(0)
+Out[63]: 'apricot'
+
+In [64]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [65]: my_fruits.pop(10)
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-65-74a5a7611465> in <module>()
+----> 1 my_fruits.pop(10)
+
+IndexError: pop index out of range
+
+In [67]: my_fruits.
+my_fruits.append   my_fruits.index    my_fruits.remove   
+my_fruits.count    my_fruits.insert   my_fruits.reverse  
+my_fruits.extend   my_fruits.pop      my_fruits.sort     
+
+In [67]: my_fruits.remove?
+Type:        builtin_function_or_method
+String form: <built-in method remove of list object at 0x7f1bd8271d88>
+Docstring:
+L.remove(value) -- remove first occurrence of value.
+Raises ValueError if the value is not present.
+
+In [68]: print my_fruits
+['Apple', 'banana', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [69]: my_fruits.remove('banana')
+
+In [70]: print my_fruits
+['Apple', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [71]: my_fruits.remove('banana')
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-71-2a9f028c4734> in <module>()
+----> 1 my_fruits.remove('banana')
+
+ValueError: list.remove(x): x not in list
+
+In [72]: 
+
+In [73]: my_fruits.
+my_fruits.append   my_fruits.index    my_fruits.remove   
+my_fruits.count    my_fruits.insert   my_fruits.reverse  
+my_fruits.extend   my_fruits.pop      my_fruits.sort     
+
+In [73]: my_fruits.reverse?
+Type:        builtin_function_or_method
+String form: <built-in method reverse of list object at 0x7f1bd8271d88>
+Docstring:   L.reverse() -- reverse *IN PLACE*
+
+In [74]: print my_fruits
+['Apple', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [75]: print  my_fruits.reverse()
+None
+
+In [76]: my_fruits
+Out[76]: ['jackfruit', 'gauva', 'fig', 'dates', 'carrot', 'Apple']
+
+In [77]: my_fruits.sort?
+Type:        builtin_function_or_method
+String form: <built-in method sort of list object at 0x7f1bd8271d88>
+Docstring:
+L.sort(cmp=None, key=None, reverse=False) -- stable sort *IN PLACE*;
+cmp(x, y) -> -1, 0, 1
+
+In [78]: my_fruits.sort(reverse=False)
+
+In [79]: print my_fruits
+['Apple', 'carrot', 'dates', 'fig', 'gauva', 'jackfruit']
+
+In [80]: my_fruits.sort(reverse=True)
+
+In [81]: print my_fruits
+['jackfruit', 'gauva', 'fig', 'dates', 'carrot', 'Apple']
+
+
+In [83]: # converting a list to a string and vice-versa
+
+In [84]: # convert a string to a list
+
+In [85]: my_string = "python"
+
+In [86]: Lmy_string = list(my_string)
+
+In [87]: print Lmy_string
+['p', 'y', 't', 'h', 'o', 'n']
+
+In [88]: Lmy_string[0] = "J"
+
+In [89]: print Lmy_string
+['J', 'y', 't', 'h', 'o', 'n']
+
+In [90]: # convert the list to a stirng
+
+In [91]: limiter=""
+
+In [92]: limiter.join?
+Type:        builtin_function_or_method
+String form: <built-in method join of str object at 0x7f1bdc1f3508>
+Docstring:
+S.join(iterable) -> string
+
+Return a string which is the concatenation of the strings in the
+iterable.  The separator between elements is S.
+
+In [93]: print limiter.join(Lmy_string)
+Jython
+
+In [94]: new_string=limiter.join(Lmy_string)
+
+In [95]: print new_string
+Jython
+
+In [96]: delimiter=':'
+
+In [97]: delimiter.join(Lmy_string)
+Out[97]: 'J:y:t:h:o:n'
+
+In [99]: # converting sentence to a list.
+
+In [100]: my_sentence = "today is saturday."
+
+In [101]: Lmy_sentence = list(my_sentence)
+
+In [102]: print Lmy_sentence
+['t', 'o', 'd', 'a', 'y', ' ', 'i', 's', ' ', 's', 'a', 't', 'u', 'r', 'd', 'a', 'y', '.']
+
+In [103]: my_sentence.split?
+Type:        builtin_function_or_method
+String form: <built-in method split of str object at 0x7f1bd96f08b8>
+Docstring:
+S.split([sep [,maxsplit]]) -> list of strings
+
+Return a list of the words in the string S, using sep as the
+delimiter string.  If maxsplit is given, at most maxsplit
+splits are done. If sep is not specified or is None, any
+whitespace string is a separator and empty strings are removed
+from the result.
+
+In [104]: Lmy_sentence = my_sentence.split()
+
+In [105]: print Lmy_sentence
+['today', 'is', 'saturday.']
+
+In [106]: Lmy_sentence[-1] = "friday."
+
+In [107]: print Lmy_sentence
+['today', 'is', 'friday.']
+
+In [108]: # converting a list to a sentence
+
+In [109]: limiter = " "
+
+In [110]: new_sentence = limiter.join(Lmy_sentence)
+
+In [111]: print new_sentence
+today is friday.
+
+In [113]: email = "tuxfux.hlp@gmail.com"
+
+In [114]: email.split('@')
+Out[114]: ['tuxfux.hlp', 'gmail.com']
+
+In [115]: 
+
+
+# task1
+
+# input
+my_days = ['yesterday','today','tomorrow','dayafter']
+
+# output
+subtask1:
+yesterday  9
+today      5
+tomorrow   8
+dayafter   8
+
+In [5]: for value in my_days:
+   ...:     print value,len(value)
+   ...:     
+yesterday 9
+today 5
+tomorrow 8
+dayafter 8
+
+
+subtask2:
+Yesterday
+TOday
+TOMorrow
+DAYAfter
+
+In [6]: for value in my_days:
+   ...:     print value,my_days.index(value)
+   ...:     
+yesterday 0
+today 1
+tomorrow 2
+dayafter 3
+
+In [7]: for value in my_days:
+    print value,my_days.index(value),value[my_days.index(value)]
+   ...:     
+yesterday 0 y
+today 1 o
+tomorrow 2 m
+dayafter 3 a
+
+In [8]: for value in my_days:
+    print value,my_days.index(value),value[my_days.index(value)],value[0:my_days.index(value)]
+   ...:     
+yesterday 0 y 
+today 1 o t
+tomorrow 2 m to
+dayafter 3 a day
+
+In [9]: for value in my_days:
+    print value,my_days.index(value),value[0:my_days.index(value)]
+   ...:     
+yesterday 0 
+today 1 t
+tomorrow 2 to
+dayafter 3 day
+
+In [11]: for value in my_days:
+    print value,my_days.index(value),value[0:my_days.index(value)]
+   ....:     
+yesterday 0 
+today 1 t
+tomorrow 2 to
+dayafter 3 day
+
+In [12]: for value in my_days:
+    print value,my_days.index(value),value[0:my_days.index(value) + 1]
+   ....:     
+yesterday 0 y
+today 1 to
+tomorrow 2 tom
+dayafter 3 daya
+
+In [13]: for value in my_days:
+    print value[0:my_days.index(value) + 1]
+   ....:     
+y
+to
+tom
+daya
+
+In [14]: for value in my_days:
+    print value[0:my_days.index(value) + 1].upper() + value[my_days.index(value) + 1:]
+   ....:     
+Yesterday
+TOday
+TOMorrow
+DAYAfter
+
+In [15]: my_string="python"
+
+In [16]: print my_string[0:3]
+pyt
+
+In [17]: print my_string[:3]
+pyt
+
+In [18]: print my_string[3:]
+hon
+
+In [19]: print my_string[3:] + my_string[:3]
+honpyt
+
+In [20]: print my_string[:3] + my_string[3]
+pyth
+
+In [21]: print my_string[:3] + my_string[3:]
+python
+
+
+
+
+## task2
+input
+my_fruits = ['apple','banana','apple','banana','cherry']
+
+output:
+duplicate = ['apple','banana']
+my_fruits = ['apple','banana','cherry']
+
+In [23]: my_fruits = ['apple','banana','apple','banana','cherry']
+
+In [24]: print my_fruits
+['apple', 'banana', 'apple', 'banana', 'cherry']
+
+In [25]: duplicate[]
+  File "<ipython-input-25-c9a68f36103d>", line 1
+    duplicate[]
+              ^
+SyntaxError: invalid syntax
+
+
+In [26]: duplicate=[]
+
+In [27]: for value in my_fruits:
+   ....:     if my_fruits.count(value) > 1:
+   ....:         duplicate.append(value)
+   ....:         my_fruits.remove(value)
+   ....:         
+
+In [28]: print my_fruits
+['apple', 'banana', 'cherry']
+
+In [29]: print duplicate
+['apple', 'banana']
+
+In [30]: 
+
+
+# aliasing/memory in lists
+
+##
+# Variables
+##
+
+In [31]: a = 1
+
+In [32]: id?
+Type:        builtin_function_or_method
+String form: <built-in function id>
+Namespace:   Python builtin
+Docstring:
+id(object) -> integer
+
+Return the identity of an object.  This is guaranteed to be unique among
+simultaneously existing objects.  (Hint: it's the object's memory address.)
+
+In [33]: print id(a)
+94701781193048
+
+In [34]: print id(1)
+94701781193048
+
+In [35]: b = 1
+
+In [36]: print id(b)
+94701781193048
+
+In [37]: print id(1)
+94701781193048
+
+In [38]: b = 2
+
+In [39]: print id(b)
+94701781193024
+
+In [40]: print id(2)
+94701781193024
+
+In [41]: print a
+1
+
+In [42]: print b
+2
+
+
+In [44]: a = ['one','two','three']
+
+In [45]: print id(a)
+140172163175632
+
+In [46]: b = a
+
+In [47]: print id(b)
+140172163175632
+
+In [48]: ## is
+
+In [49]: a is b
+Out[49]: True
+
+In [50]: print a
+['one', 'two', 'three']
+
+In [51]: print b
+['one', 'two', 'three']
+
+In [52]: c = ['one','two','three']
+
+In [53]: print id(c)
+140172163175920
+
+In [54]: a is c
+Out[54]: False
+
+# soft copy
+
+In [44]: a = ['one','two','three']
+
+In [45]: print id(a)
+140172163175632
+
+In [46]: b = a
+
+In [47]: print id(b)
+140172163175632
+
+In [48]: ## is
+
+In [49]: a is b
+Out[49]: True
+
+In [50]: print a
+['one', 'two', 'three']
+
+In [51]: print b
+['one', 'two', 'three']
+
+In [52]: c = ['one','two','three']
+
+In [53]: print id(c)
+140172163175920
+
+In [54]: a is c
+Out[54]: False
+
+In [55]: a[1]
+Out[55]: 'two'
+
+In [56]: a[1]="22"
+
+In [57]: print a
+['one', '22', 'three']
+
+In [58]: print b
+['one', '22', 'three']
+
+In [60]: print a
+['one', '22', 'three']
+
+In [61]: print b
+['one', '22', 'three']
+
+In [62]: id(a)
+Out[62]: 140172163175632
+
+In [63]: id(b)
+Out[63]: 140172163175632
+
+In [64]: a is b
+Out[64]: True
+
+In [65]: a = ["1","2","3"]
+
+In [66]: print a
+['1', '2', '3']
+
+In [67]: print b
+['one', '22', 'three']
+
+In [68]: print id(a)
+140172184937896
+
+In [69]: print id(b)
+140172163175632
+
+
+## deep copy
+
+In [71]: a = [11,22,33]
+
+In [72]: print a,id(a)
+[11, 22, 33] 140172163338536
+
+In [73]: b = a[:]
+
+In [74]: print b,id(b)
+[11, 22, 33] 140172163176928
+
+In [75]: a is b
+Out[75]: False
+
+In [76]: a[0]=111
+
+In [77]: print a
+[111, 22, 33]
+
+In [78]: print b
+[11, 22, 33]
+
+In [79]: import copy
+
+In [80]: copy.
+copy.Error           copy.copy            copy.dispatch_table  copy.name            copy.weakref         
+copy.PyStringMap     copy.deepcopy        copy.error           copy.t               
+
+In [80]: copy.deepcopy?
+Type:        function
+String form: <function deepcopy at 0x7f7c624a8aa0>
+File:        /usr/lib/python2.7/copy.py
+Definition:  copy.deepcopy(x, memo=None, _nil=[])
+Docstring:
+Deep copy operation on arbitrary Python objects.
+
+See the module's __doc__ string for more info.
+
+In [81]: c = copy.deepcopy(a)
+
+In [82]: print c,a,id(a),id(c)
+[111, 22, 33] [111, 22, 33] 140172163338536 140172163368072
+
+
+##
+# args
+##
+please see the program 05-add.py
+reference:
+https://docs.python.org/3/library/argparse.html
+
+##
+#  List comprehensions
+##
+
+https://github.com/tuxfux-hlp/Python-examples/blob/master/lists/list_comprehension.txt
+
+In [87]: num = raw_input("please enter a number:")
+please enter a number:1,2,3,4,5,6,7,8,9,10
+
+In [88]: print num,type(num)
+1,2,3,4,5,6,7,8,9,10 <type 'str'>
+
+In [89]: # output -> 2,4,6,8,10
+
+In [90]: num.split(',')
+Out[90]: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+In [91]: for value in  num.split(','):
+   ....:     
+KeyboardInterrupt
+
+In [91]: even=[]
+
+In [92]: for value in num.split(','):
+   ....:     if int(value) % 2 == 0:
+   ....:         even.append(value)
+   ....:         
+
+In [93]: print even
+['2', '4', '6', '8', '10']
+
+In [94]: ','.join(even)
+Out[94]: '2,4,6,8,10'
+
+
+In [95]: # List comprehensions
+
+In [96]: [ value for value in num.split(',') if int(value) % 2 == 0]
+Out[96]: ['2', '4', '6', '8', '10']
+
+In [97]: ','.join([ value for value in num.split(',') if int(value) % 2 == 0])
+Out[97]: '2,4,6,8,10'
+
+In [98]: 
+
+In [99]: my_sentence="today is tuesday"
+
+In [100]: [ print [value.upper(),value.lower(),value.capitalize()]for value in my_sentence.split() ]
+  File "<ipython-input-100-e83535e1aa23>", line 1
+    [ print [value.upper(),value.lower(),value.capitalize()]for value in my_sentence.split() ]
+          ^
+SyntaxError: invalid syntax
+
+
+In [101]: [[value.upper(),value.lower(),value.capitalize()]for value in my_sentence.split() ]
+Out[101]: 
+[['TODAY', 'today', 'Today'],
+ ['IS', 'is', 'Is'],
+ ['TUESDAY', 'tuesday', 'Tuesday']]
+
+In [102]: 
+
+
+
+
+
+
+
+
+

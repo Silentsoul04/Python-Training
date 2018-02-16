@@ -1,0 +1,103 @@
+Ubuntu/Linuxmint/zorion
+-------------------------
+* sudo apt-get install python
+* sudo apt-get install python3
+* sudo apt-get install ipython
+* sudo apt-get install ipython3
+* sudo apt-get install bpython
+* sudo apt-get install bpython3
+* sudo apt-get install ipython-notebook
+
+Redhat/Fedora/Centos
+-------------------------
+* yum install python
+* yum install python3
+* yum install ipython
+* yum install ipython3
+* yum install bpython
+* yum install bpython3
+
+Windows
+-------------------------
+https://www.continuum.io/downloads (ipython)
+ipython notebook
+
+IDE
+----
+http://stackoverflow.com/questions/81584/what-ide-to-use-for-python
+
+
+
+
+tcloudost@tcloudost-VirtualBox ~ $ python --version
+Python 2.7.6
+tcloudost@tcloudost-VirtualBox ~ $ python3 --version
+Python 3.4.3
+tcloudost@tcloudost-VirtualBox ~
+
+
+tcloudost@tcloudost-VirtualBox ~ $ python
+Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
+[GCC 4.8.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> print "hello world!!"
+hello world!!
+>>> 
+>>> quit()
+
+tcloudost@tcloudost-VirtualBox ~ $ python3
+Python 3.4.3 (default, Oct 14 2015, 20:28:29) 
+[GCC 4.8.4] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> print ("hello world!!")
+hello world!!
+>>> 
+>>> quit()
+tcloudost@tcloudost-VirtualBox ~ $ 
+
+
+
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ ls
+batch-57.txt  first.py  Installation.txt  opensource.txt
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ python first.py
+hello world!!!
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ perl first.py
+hello world!!!tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ 
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ 
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ ls -l
+total 16
+-rw-r--r-- 1 tcloudost tcloudost  136 Dec 15 19:35 batch-57.txt
+-rw-r--r-- 1 tcloudost tcloudost   23 Dec 16 18:45 first.py
+-rw-r--r-- 1 tcloudost tcloudost 1272 Dec 15 19:17 Installation.txt
+-rw-r--r-- 1 tcloudost tcloudost 1659 Dec 14 19:39 opensource.txt
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ 
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ chmod +x first.py
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ 
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ ls -l
+total 16
+-rw-r--r-- 1 tcloudost tcloudost  136 Dec 15 19:35 batch-57.txt
+-rwxr-xr-x 1 tcloudost tcloudost   23 Dec 16 18:45 first.py
+-rw-r--r-- 1 tcloudost tcloudost 1272 Dec 15 19:17 Installation.txt
+-rw-r--r-- 1 tcloudost tcloudost 1659 Dec 14 19:39 opensource.txt
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ ./first.py 
+Warning: unknown mime-type for "hello world!!!" -- using "application/octet-stream"
+Error: no such file "hello world!!!"
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ # crontab and scheduler
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ 
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ echo $PATH
+/home/tcloudost/bin:/home/tcloudost/anaconda2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ python --version
+Python 2.7.6
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ which python
+/usr/bin/python
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ /usr/bin/python --version
+Python 2.7.6
+
+
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ ./first.py 
+hello world!!!
+tcloudost@tcloudost-VirtualBox ~/python-examples/batch-57 $ 
+
+

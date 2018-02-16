@@ -1,0 +1,64 @@
+
+1) Issue with the big.py logic. please sort it out.
+2) make modification to the program.
+guess_number.py
+# task1: reduce the number of chances/guesses to 3.
+# task2: rand function to generate random numbers for number variable.
+
+3) https://projecteuler.net/archives
+4) http://www.pythonchallenge.com/pc/def/map.html
+
+# Lists
+
+5) please print the values as show
+days = ['yesterday','today','tomorrow','dayafter']
+
+a) print in the following way
+yesterday 9
+today     5
+tomorrow  8
+dayafter  8
+
+hint: for,len
+
+b) print out the following way
+Yesterday
+TOday
+TOMorrow
+DAYAfter
+
+
+6) Do as follows:
+my_fruits = ['apple','banana','apple','banana','cherry']
+
+output:
+my_fruits = ['apple','banana','cherry']
+my_duplicate = ['apple','banana']
+
+hint: pop
+
+7) Family drama: https://drive.google.com/file/d/0Bxq4UvUJTuQPMWZKd2d5ZlBoY00/view
+8) https://github.com/sambapython/python/blob/master/Assignments.ipynb
+9) https://github.com/sambapython/python/blob/master/assignments.txt
+10) del,zip -> tutorialpoint
+11) https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt
+12) https://drive.google.com/file/d/0Bxq4UvUJTuQPZ1RTZGc5Q3BMWFk/view
+13) https://github.com/sambapython/python/blob/master/snow_man/Project2-CS61002.pdf
+
+# todo
+In [21]: a = iter(x)
+
+In [22]: print a
+<listiterator object at 0x7fc1fc628e90>
+
+In [23]: izip(a,a)
+Out[23]: <itertools.izip at 0x7fc1fc779440>
+
+In [24]: for value in izip(a,a):
+    ...:     print value
+    ...:     
+(1, 2)
+(3, 4)
+(5, 6)
+(7, 8)
+(9, 10)

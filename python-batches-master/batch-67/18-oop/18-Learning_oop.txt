@@ -1,0 +1,387 @@
+Programming
+ + Functional
+ + object oriented programming
+
+ reference:
+ https://github.com/tuxfux-hlp/Python-examples/blob/master/opps/Good_links.txt
+
+A - Abstraction
+
+Defination/template
+
+car         - class/blueprint
+- wheels  - variable/data
+- body
+- color
++ acclerate() - function/method
++ break()
+
+Models
+--------
+- audi     - instances/objects
+- bentley
+- Ford
+- maruti
+- nano
+
+P - Polymorphism
+
+In [1]: a = 1
+
+In [2]: b = 2
+
+In [3]: a + b
+Out[3]: 3
+
+In [4]: c = "python"
+
+In [5]: d = "rocks"
+
+In [6]: c + d
+Out[6]: 'pythonrocks'
+
+
+interest
++ homeloan interest
++ education interest
++ saving bank interest
++ fixed deposit interest
+
+I - Inheritance
+
+parent
++ child
+
+E - Encapsulation
+
+encapsulation is more about functionality.
+encapulation is also called data hiding.
+
+
+In [1]: class Account():
+   ...:     pass
+   ...: 
+
+In [2]: print (Account),type(Account)
+__main__.Account <type 'classobj'>
+
+In [3]: class Account():
+   ...:     balance = 0
+   ...:     def my_balance():
+   ...:         print "my balance is {}".format(balance)
+   ...:         
+
+In [4]: balu = Account
+
+In [5]: print balu
+__main__.Account
+
+In [6]: print balu,type(balu)
+__main__.Account <type 'classobj'>
+
+In [7]: print dir(balu)
+['__doc__', '__module__', 'balance', 'my_balance']
+
+In [8]: balu.balance
+Out[8]: 0
+
+In [9]: balu.my_balance()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-9-ee115894ce8e> in <module>()
+----> 1 balu.my_balance()
+
+TypeError: unbound method my_balance() must be called with Account instance as first argument (got nothing instead)
+
+In [10]: balu = Account()
+
+In [11]: print balu,type(balu)
+<__main__.Account instance at 0x7f845fb74cf8> <type 'instance'>
+
+In [12]: balu.balance
+Out[12]: 0
+
+In [13]: balu.my_balance()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-13-ee115894ce8e> in <module>()
+----> 1 balu.my_balance()
+
+TypeError: my_balance() takes no arguments (1 given)
+
+In [14]: class Account():
+    ...:     balance = 0
+    ...:     def my_balance(self):
+    ...:         print "my balance is {}".format(balance)
+    ...:         
+    ...:         
+
+In [15]: balu = Account()
+
+In [16]: balu.balance
+Out[16]: 0
+
+In [17]: balu.my_balance()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-17-ee115894ce8e> in <module>()
+----> 1 balu.my_balance()
+
+<ipython-input-14-67b8d7e5f522> in my_balance(self)
+      2     balance = 0
+      3     def my_balance(self):
+----> 4         print "my balance is {}".format(balance)
+      5 
+      6 
+
+NameError: global name 'balance' is not defined
+
+In [18]: class Account():
+    ...:     balance = 0
+    ...:     def my_balance(self):
+    ...:         print "my balance is {}".format(balu.balance)
+    ...:         
+    ...:         
+    ...:         
+
+In [19]: balu = Account()
+
+In [20]: balu.balance
+Out[20]: 0
+
+In [21]: balu.my_balance()
+my balance is 0
+
+In [22]: ## komala
+
+In [23]: komala = Account()
+
+In [24]: komala.balance
+Out[24]: 0
+
+In [25]: komala.balance = 10000
+
+In [26]: balu.balance
+Out[26]: 0
+
+In [27]: komala.balance
+Out[27]: 10000
+
+In [28]: komala.my_balance()
+my balance is 0
+
+In [29]: class Account():
+    ...:     balance = 0
+    ...:     def my_balance(self):
+    ...:         print "my balance is {}".format(self.balance)
+    ...:         
+    ...:         
+    ...:         
+    ...:         
+
+In [30]: komala.my_balance()
+my balance is 0
+
+In [31]: komala = Account()
+
+In [32]: komala.my_balance()
+my balance is 0
+
+In [33]: komala.balance
+Out[33]: 0
+
+In [34]: komala.balance = 10000
+
+In [35]: komala.balance
+Out[35]: 10000
+
+In [36]: komala.my_balance()
+my balance is 10000
+
+In [37]: balu = Account()
+
+In [38]: balu.balance
+Out[38]: 0
+
+In [39]: balu.my_balance()
+my balance is 0
+
+In [40]: Account.balance=20000
+
+In [41]: Account.balance
+Out[41]: 20000
+
+In [42]: balu.my_balance
+Out[42]: <bound method Account.my_balance of <__main__.Account instance at 0x7f845fb79248>>
+
+In [43]: balu.my_balance()
+my balance is 20000
+
+In [44]: komala.my_balance()
+my balance is 10000
+
+In [45]: ## constructor
+
+In [46]: class Account():
+    ...:     def __init__(self):
+    ...:         self.balance = 0
+    ...:     def my_balance(self):
+    ...:         print "my balance is {}".format(self.balance)
+    ...:         
+
+In [47]: balu = Account
+
+In [48]: print type(balu)
+<type 'classobj'>
+
+In [49]: print dir(balu)
+['__doc__', '__init__', '__module__', 'my_balance']
+
+In [50]: ravi = Account()
+
+In [51]: print type(ravi)
+<type 'instance'>
+
+In [52]: print dir(ravi)
+['__doc__', '__init__', '__module__', 'balance', 'my_balance']
+
+In [53]: ## variables - class variables and instance variables
+
+In [53]: ## variables - class variables and instance variables
+
+In [54]: print dir(Account)
+['__doc__', '__init__', '__module__', 'my_balance']
+
+In [55]: Account.new_balance=0
+
+In [56]: print dir(Account)
+['__doc__', '__init__', '__module__', 'my_balance', 'new_balance']
+
+In [57]: balu.balance
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-57-a78b13e9ea22> in <module>()
+----> 1 balu.balance
+
+AttributeError: class Account has no attribute 'balance'
+
+In [58]: print dir(balu)
+['__doc__', '__init__', '__module__', 'my_balance', 'new_balance']
+
+In [59]: print dir(ravi)
+['__doc__', '__init__', '__module__', 'balance', 'my_balance', 'new_balance']
+
+
+## special class methods or magic method
+http://anandology.com/python-practice-book/object_oriented_programming.html#special-class-methods
+https://github.com/RafeKettler/magicmethods
+
+In [1]: a = 1
+
+In [2]: b = 2
+
+In [3]: a + b
+Out[3]: 3
+
+In [4]: print dir(a)
+['__abs__', '__add__', '__and__', '__class__', '__cmp__', '__coerce__', '__delattr__', '__div__', '__divmod__', '__doc__', '__float__', '__floordiv__', '__format__', '__getattribute__', '__getnewargs__', '__hash__', '__hex__', '__index__', '__init__', '__int__', '__invert__', '__long__', '__lshift__', '__mod__', '__mul__', '__neg__', '__new__', '__nonzero__', '__oct__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdiv__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'imag', 'numerator', 'real']
+
+In [5]: type(a)
+Out[5]: int
+
+In [6]: # a is an instance of int class
+
+In [7]: a.__add__(b)
+Out[7]: 3
+
+In [8]: c = "python"
+
+In [9]: d = " rocks"
+
+In [10]: c.__add__(d)
+Out[10]: 'python rocks'
+
+In [11]: print type(c)
+<type 'str'>
+
+In [12]: print dir(c)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+
+  In [14]: # rational numbers
+
+In [15]: # 1/2 + 1/3 = 5/6
+
+In [16]: 1/2 + 1/3
+Out[16]: 0
+
+In [17]: 1/2.0 + 1/3.0
+Out[17]: 0.8333333333333333
+
+In [18]: a = 10
+
+In [19]: isinstance(a,int)
+Out[19]: True
+
+In [20]: isinstance(a,str)
+Out[20]: False
+
+In [21]: isinstance?
+Docstring:
+isinstance(object, class-or-type-or-tuple) -> bool
+
+Return whether an object is an instance of a class or of a subclass thereof.
+With a type as second argument, return whether that is the object's type.
+The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
+isinstance(x, A) or isinstance(x, B) or ... (etc.).
+Type:      builtin_function_or_method
+
+### encapsulation
+http://radek.io/2011/07/21/private-protected-and-public-in-python/
+
+In [24]: class Cup:
+    ...:     def __init__(self, color):
+    ...:         self._color = color    # protected variable
+    ...:         self.__content = None  # private variable
+    ...: 
+    ...:     def fill(self, beverage):
+    ...:         self.__content = beverage
+    ...: 
+    ...:     def empty(self):
+    ...:         self.__content = None
+    ...:         
+
+In [25]: 
+
+In [25]: bluecup = Cup()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-25-8fbd9c4879fc> in <module>()
+----> 1 bluecup = Cup()
+
+TypeError: __init__() takes exactly 2 arguments (1 given)
+
+In [26]: bluecup = Cup(color="blue")
+
+In [27]: bluecup._color
+Out[27]: 'blue'
+
+In [28]: bluecup.__content
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-28-2e17207350a8> in <module>()
+----> 1 bluecup.__content
+
+AttributeError: Cup instance has no attribute '__content'
+
+In [29]: bluecup.fill("coffee")
+
+In [30]: # name mangling
+
+In [31]: bluecup._Cup__content
+Out[31]: 'coffee'
+
+In [32]: bluecup._Cup__content = "tea"
+
+In [33]: bluecup._Cup__content
+Out[33]: 'tea'
